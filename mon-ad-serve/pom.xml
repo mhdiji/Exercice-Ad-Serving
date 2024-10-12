@@ -15,6 +15,9 @@
     <maven.compiler.source>20</maven.compiler.source>
     <maven.compiler.target>20</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <grpc.version>1.51.0</grpc.version>
+        <protobuf.version>3.21.12</protobuf.version>
+        <protoc-gen-grpc-java.version>1.51.0</protoc-gen-grpc-java.version>
   </properties>
 
   <dependencies>
@@ -39,6 +42,13 @@
       <artifactId>grpc-stub</artifactId>
       <version>1.51.0</version>
     </dependency>
+    <!-- added dependency for grpc imports --> 
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+  
   </dependencies>
 
   <build>
@@ -59,6 +69,7 @@
           <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
+      <!-- adding plugin for grpc protocol -->
       <plugin>
         <groupId>org.xolstice.maven.plugins</groupId>
         <artifactId>protobuf-maven-plugin</artifactId>

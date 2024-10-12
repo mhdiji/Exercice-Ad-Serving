@@ -1,0 +1,21 @@
+// using proto3 version
+syntax = "proto3";
+
+// true in order to generate code in multiple files
+// modularity purposes
+option java_multiple_files = true;
+
+
+// Defining request and response formats
+message IncrementImpressionAdRequest{
+    string ad_id = 1;
+}
+
+message IncrementImpressionAdResponse{
+    bool is_success = 1;
+}
+
+// defining the service
+service ImpressionAdService{
+    rpc IncrementImpression (IncrementImpressionAdRequest) returns (IncrementImpressionAdResponse);
+}
