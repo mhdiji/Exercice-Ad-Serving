@@ -1,1 +1,11 @@
-Hello world
+# Exercice Ad Serving
+Ceci est un projet pour l'entretien Arago
+
+## Étapes suivies
+1. Créer un projet maven :
+```bash
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.1
+2. Add dependencies in the pom.xml file(As mentioned in the medium site tutorial):
+
+
+
