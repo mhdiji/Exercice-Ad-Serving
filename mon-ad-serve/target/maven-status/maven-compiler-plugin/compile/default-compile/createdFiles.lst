@@ -1,7 +1,7 @@
 ImpressionAdServiceGrpc$1.class
 IncrementImpressionAdResponse$Builder.class
 ImpressionAdServiceGrpc$ImpressionAdServiceStub.class
-org/exercice/adserve/App.class
+ImpressionAdServiceOuterClass.class
 IncrementImpressionAdResponseOrBuilder.class
 ImpressionAdServiceGrpc$MethodHandlers.class
 IncrementImpressionAdResponse$1.class
@@ -18,5 +18,4 @@ IncrementImpressionAdRequest$Builder.class
 ImpressionAdServiceGrpc$2.class
 IncrementImpressionAdRequestOrBuilder.class
 ImpressionAdServiceGrpc$ImpressionAdServiceBaseDescriptorSupplier.class
-Service.class
 ImpressionAdServiceGrpc$ImpressionAdServiceBlockingStub.class

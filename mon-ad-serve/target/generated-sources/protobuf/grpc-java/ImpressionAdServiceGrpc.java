@@ -7,7 +7,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.51.0)",
-    comments = "Source: service.proto")
+    comments = "Source: ImpressionAdService.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ImpressionAdServiceGrpc {
 
@@ -240,7 +240,7 @@ public final class ImpressionAdServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return Service.getDescriptor();
+      return ImpressionAdServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override
