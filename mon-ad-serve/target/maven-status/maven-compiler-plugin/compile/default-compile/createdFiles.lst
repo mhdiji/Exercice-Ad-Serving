@@ -2,7 +2,6 @@ ImpressionAdServiceGrpc$1.class
 IncrementImpressionAdResponse$Builder.class
 ImpressionAdServiceGrpc$ImpressionAdServiceStub.class
 ImpressionAdServiceOuterClass.class
-IncrementImpressionAdResponseOrBuilder.class
 ImpressionAdServiceGrpc$MethodHandlers.class
 IncrementImpressionAdResponse$1.class
 IncrementImpressionAdRequest.class
