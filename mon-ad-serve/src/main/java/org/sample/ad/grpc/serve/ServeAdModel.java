@@ -24,7 +24,7 @@ public class ServeAdModel {
     return adDescription;
   }
   public void setAdTitle(String adTitle) {
-    this.adTitle = adDescription;
+    this.adTitle = adTitle;
   }
 
   public void setAdDescription(String adDescription) {
@@ -45,5 +45,9 @@ public class ServeAdModel {
 
   public void setAdId(String adId) {
     this.adId = adId;
+  }
+
+  public String convertJson(){
+    return new com.google.gson.Gson().toJson(this);
   }
 }

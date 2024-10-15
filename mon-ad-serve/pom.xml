@@ -18,12 +18,15 @@
   </properties>
 
   <dependencies>
+    <!-- Test Dependencies -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- gRPC Dependencies -->
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-netty</artifactId>
@@ -39,31 +42,37 @@
       <artifactId>grpc-stub</artifactId>
       <version>1.51.0</version>
     </dependency>
-    <!-- added dependency for grpc imports -->
+
+    <!-- Annotation API -->
     <dependency>
       <groupId>javax.annotation</groupId>
       <artifactId>javax.annotation-api</artifactId>
       <version>1.3.2</version>
     </dependency>
+
+    <!-- Redis Client (Jedis) -->
     <dependency>
       <groupId>redis.clients</groupId>
       <artifactId>jedis</artifactId>
-      <version>5.0.1</version>
+      <version>4.4.3</version>
     </dependency>
+
+    <!-- Servlet API -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
       <version>5.0.0</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Gson for JSON Processing -->
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>2.10.1</version>
     </dependency>
 
-
-    <!-- Jetty Server pour Jetty 11.x -->
+    <!-- Jetty Server Dependencies -->
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-server</artifactId>
@@ -75,8 +84,18 @@
       <version>11.0.15</version>
     </dependency>
 
+    <!-- Logging Dependencies -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.7</version>
+    </dependency>
   </dependencies>
-
 
   <build>
     <extensions>
@@ -87,6 +106,7 @@
       </extension>
     </extensions>
     <plugins>
+      <!-- Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -96,7 +116,8 @@
           <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
-      <!-- adding plugin for grpc protocol -->
+
+      <!-- Protobuf Maven Plugin -->
       <plugin>
         <groupId>org.xolstice.maven.plugins</groupId>
         <artifactId>protobuf-maven-plugin</artifactId>
@@ -117,6 +138,28 @@
               <goal>compile</goal>
               <goal>compile-custom</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Shade Plugin pour Créer un JAR Exécutable -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.4.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>org.sample.ad.grpc.serve.JettyServer</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
           </execution>
         </executions>
       </plugin>

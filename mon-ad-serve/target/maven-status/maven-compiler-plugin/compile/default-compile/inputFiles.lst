@@ -1,5 +1,8 @@
 /home/hdijim/Exercice-Ad-Serving/mon-ad-serve/target/generated-sources/protobuf/java/IncrementImpressionAdRequestOrBuilder.java
+/home/hdijim/Exercice-Ad-Serving/mon-ad-serve/src/main/java/org/sample/ad/grpc/serve/ServeAdService.java
+/home/hdijim/Exercice-Ad-Serving/mon-ad-serve/src/main/java/org/sample/ad/grpc/serve/JettyServer.java
 /home/hdijim/Exercice-Ad-Serving/mon-ad-serve/target/generated-sources/protobuf/java/IncrementImpressionAdResponseOrBuilder.java
+/home/hdijim/Exercice-Ad-Serving/mon-ad-serve/src/main/java/org/sample/ad/grpc/serve/ServeAdModel.java
 /home/hdijim/Exercice-Ad-Serving/mon-ad-serve/target/generated-sources/protobuf/java/ImpressionAdServiceOuterClass.java
 /home/hdijim/Exercice-Ad-Serving/mon-ad-serve/target/generated-sources/protobuf/java/IncrementImpressionAdRequest.java
 /home/hdijim/Exercice-Ad-Serving/mon-ad-serve/src/main/java/org/sample/ad/grpc/serve/ServeAdServlet.java
